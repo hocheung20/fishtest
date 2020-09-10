@@ -313,7 +313,7 @@ def main():
     print("Worker version {} connecting to {}".format(WORKER_VERSION, remote))
 
     try:
-        cpu_count = min(int(options.concurrency), multiprocessing.cpu_count() - 1)
+        cpu_count = min(int(options.concurrency), multiprocessing.cpu_count())
     except:
         cpu_count = int(options.concurrency)
 
